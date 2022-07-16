@@ -1,0 +1,106 @@
+.App {
+  font-family: "Helvetica Neue";
+  background: #F9FAFB;
+  color: #192024;
+}
+
+.content {
+  margin-left: 94px;
+  
+}
+  
+.airLineGridContainer {
+  display: block;
+  margin-left: 86px;
+  margin-top: 56px;
+}
+  
+.gridBox {
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0-1px 4px 0 rgba(25, 32, 36, 0.04), 0 3px 6px 0 rgba(25, 32, 36, 0.16);
+  border: 1px solid #aeb2b4  ;
+  margin: 8px;
+  .airlineName {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .details {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .website {
+    font-size: 14px;
+    color:#5a6872;
+  }
+}
+
+.gridBox:hover {
+  .details {
+    display: block;
+  }
+  border: 1px solid #363f45;
+}
+
+.center {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.details {
+  display: none;
+}
+
+.navbar {
+  img {
+    padding: 19px 16px;
+  }
+  border-bottom: 1px solid #5a6872;
+  background: #FFFFFF
+}
+
+.airlineHeader {
+  padding-top: 67px;
+  padding-bottom: 50px;
+  font-size: 44px;
+  font-weight: 900;
+}
+
+.filterBar {
+  .filterHeader {
+    padding: 23px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #192024;
+  }
+  .checkboxBar {
+    font-size: 14px;
+    font-weight: normal;
+    color: #192024;
+    input {
+      height: 20px;
+      width: 20px;
+      margin-right: 10px;
+      vertical-align: sub;
+    }
+    label {
+      padding-right: 24px;
+    }
+  }
+}
+
+.aligned {
+  display: flex;
+  align-items: center;
+  img {
+    height: 32px;
+    width: 32px;
+  }
+  span {
+    padding-left: 18px;
+    max-width: 200px;
+    word-break: break-all;
+  }
+}
