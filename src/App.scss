@@ -10,7 +10,8 @@
 }
   
 .airLineGridContainer {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   margin-left: 86px;
   margin-top: 56px;
 }

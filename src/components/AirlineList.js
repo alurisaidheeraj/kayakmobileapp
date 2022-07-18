@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios'
 import jsonpAdapter from "axios-jsonp"
 import logo from "./logo.svg"
+import {Link} from "react-router-dom"
+import "./AirlineList.scss"
 
 const AirlineList = () => {
     const [airlineData, setAirlineData] = useState([]);
@@ -16,14 +18,15 @@ const AirlineList = () => {
     }).catch(err=> {
         console.log(err)
     })
- })
+ }, [])
+
  return (
-    <div>
-     <div className="navbar">
-        <img src={logo} alt="" />
+    <div className="airlinelist">
+     <div className="airlinelistLogo">
+        <img className="kayak-header-logo" src={logo} alt="" />
       </div>
-        <input type="text" placeholder="Airline filter" onChange={e => {setSearchTerm(e.target.value)}}/>
-            {airlineData.filter((airline) => {
+        <input className= "airline-search-filter" type="text" placeholder="Airline filter..." onChange={e => {setSearchTerm(e.target.value)}}/>
+        <div className="airlinelistDetails">{airlineData.filter((airline) => {
                 if(searchTerm === "") {
                     return airline
                 }
@@ -32,10 +35,14 @@ const AirlineList = () => {
                 }
                 return false
             }).map((airline, index) => (
-                <div key={index}>
-                    <img src={"https://kayak.com" + airline.logoURL} alt="" />
-                     {airline.name}</div>
+                <div className="items"key={index}>
+                <div className="aligned">
+                    <img className="airline-image"src={"https://kayak.com" + airline.logoURL} alt="" />
+                    <Link to="/airlinedetails"> <span className="airlineName">{airline.name}</span></Link>
+                </div>
+                </div>
             ))}
+            </div>      
     </div>
  )
 }
