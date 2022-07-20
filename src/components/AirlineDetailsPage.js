@@ -3,12 +3,14 @@ import "./AirlineDetailsPage.scss"
 import { Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { setAirlineData } from '../store/airlines/action'
+import { setAirlineData } from '../store/airlines/action';
+
 const AirlineDetailsPage = () => {
     const { code } = useParams();
     const [currentAirLine, setCurrentAirLine] = useState({})
     const airlines = useSelector((state) => state.airlines.airlineData);
     const dispatch = useDispatch()
+    let textInput = React.createRef();
 
     useEffect(() => {
         if (airlines && airlines.length === 0) {
@@ -27,6 +29,8 @@ const AirlineDetailsPage = () => {
         }
 
     }, [code, airlines])
+
+
     return (
         <div className="airline-details">
             <i className="arrow left"></i><span className="airline-back-to-list"><Link to="/">Back to list</Link></span>
@@ -39,12 +43,10 @@ const AirlineDetailsPage = () => {
                 <a href="www.aa.com">{currentAirLine.site}</a>
             </div>
             <div className="airline-check-flight-status">
-                <a href="https://www.kayak.com/tracker">Check flight status</a>
+                <a href="#">Check flight status</a>
             </div>
-            <input type="text" placeholder="Enter Flight Number..." />
-            <button type="button">Check</button>
-
-
+                <input type="text" ref={textInput} placeholder="Enter Flight Number..." />
+                <button type="button" onClick={()=> window.open("https://www.kayak.com/tracker" +'/'+currentAirLine.code+'-'+ textInput.current.value +'/'+new Date().toISOString().slice(0, 10))}>Check</button>
         </div>
 
     )
