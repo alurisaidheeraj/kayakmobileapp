@@ -14,17 +14,25 @@
     .airline-back-to-list, a{
         color: #f49000;
     }
+    .airline-details-site, .airline-check-flight-status {
+        color: #f49000;
+    }
     a{
         text-decoration: none;
     }
     p{
         margin: 0;
+        white-space: nowrap;
     }
     .airline-detail-list {
         margin: 30px 0;
     }
     .airline-check-flight-status {
         margin-bottom: 10px;
+        margin-top: 40px;
+    }
+    .airline-details-phone-website{
+        margin-top: -28px;
     }
     input {
         border: 1px solid #cacaca;
@@ -33,10 +41,9 @@
     }
     input::placeholder {
         color: #cacaca;
-        padding: 5px;
     }
-    input.form-control {
-        margin-left: 30px;
+    input {
+        padding-left: 15px;
       }
     input:focus-visible {
         outline: unset;
@@ -56,8 +63,8 @@
     }
     .image {
         animation: rotation 0.5s ease-in;
-        margin-left: 142px;
-        margin-top: -33px;
+        margin-left: 115px;
+        width: 60px;
       }
       
       @keyframes rotation {

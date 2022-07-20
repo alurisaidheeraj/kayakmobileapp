@@ -37,18 +37,19 @@ const AirlineDetailsPage = () => {
             <div className="airline-detail-list">
              <div className="airline-details-name">
                 <p>{currentAirLine.name} ({currentAirLine.code})</p>
-                <img className='image' src={"https://kayak.com" + currentAirLine.logoURL} alt="" />
+                <img className='image' src={"https://kayak.com" + currentAirLine.logoURL}  style={{fill:"#FFFFFF"}} alt="" />
               </div>
+              <div className='airline-details-phone-website'>
                 <p className="airline-phoneNumber">{currentAirLine.phone}</p>
-                <a href="www.aa.com">{currentAirLine.site}</a>
+                <p className="airline-details-site">{currentAirLine.site}</p>
             </div>
             <div className="airline-check-flight-status">
-                <a href="#">Check flight status</a>
+                Check flight status
             </div>
                 <input type="text" ref={textInput} placeholder="Enter Flight Number..." />
                 <button type="button" onClick={()=> window.open("https://www.kayak.com/tracker" +'/'+currentAirLine.code+'-'+ textInput.current.value +'/'+new Date().toISOString().slice(0, 10))}>Check</button>
         </div>
-
+      </div>
     )
 }
 

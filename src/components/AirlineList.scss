@@ -4,10 +4,13 @@
         background: #333333;
         padding: 10px 0;
         .kayak-header-logo {
-            width: 75%;
+            width: 60%;
             margin-bottom: -4px;
             margin-left: 10px;
         }
+    }
+    .airlinelistDetails {
+      padding: 20px 0;
     }
     .airline-search-filter {
         border-radius: 15px;
@@ -19,16 +22,19 @@
     
     input::placeholder {
         color: #cacaca;
-        padding: 20px;
     }
+    input {
+      text-indent: 15px;
+    }
+   
     input:focus-visible {
         outline: unset;
      }
 }
 .items{
     width: 300px;
-    padding: 20px;
-    border-bottom: 1px solid #cacaca  ;
+    padding: 5px;
+    border-top: 1px solid #cacaca;
     margin: 8px;
     .airlineName {
       font-size: 18px;
