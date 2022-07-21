@@ -1,59 +1,59 @@
 .airlinelist {
-    padding: 20px;
-    .airlinelistLogo {
-        background: #333333;
-        padding: 10px 0;
-        .kayak-header-logo {
-            width: 60%;
-            margin-bottom: -4px;
-            margin-left: 10px;
-        }
-    }
-    .airlinelistDetails {
-      padding: 20px 0;
-    }
-    .airline-search-filter {
-        border-radius: 15px;
-        width:100%;
-        height: 30px;
-        margin-top: 20px;
-        border: 1px solid #cacaca;
-    }
-    
-    input::placeholder {
-        color: #cacaca;
-    }
-    input {
-      text-indent: 15px;
-    }
-   
-    input:focus-visible {
-        outline: unset;
-     }
-}
-.items{
-    width: 300px;
-    padding: 5px;
-    border-top: 1px solid #cacaca;
-    margin: 8px;
-    .airlineName {
-      font-size: 18px;
-      color: #333333;
-    }
-}
-.aligned {
-    display: flex;
-    align-items: center;
-    a{
-     text-decoration: none;
-    }
-    .airline-image {
-      height:20%;
-      width:20%;
-    }
-    span {
-      padding-left: 18px;
-      max-width: 200px;
-      word-break: break-all;
+  padding: 20px;
+  .airlinelistLogo {
+    background: #333333;
+    padding: 10px 0;
+    .kayak-header-logo {
+      width: 60%;
+      margin-bottom: -4px;
+      margin-left: 10px;
     }
   }
+  .airlinelistDetails {
+    padding: 20px 0;
+  }
+  .airline-search-filter {
+    border-radius: 15px;
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    border: 1px solid #cacaca;
+  }
+
+  input::placeholder {
+    color: #cacaca;
+  }
+  input {
+    text-indent: 15px;
+  }
+
+  input:focus-visible {
+    outline: unset;
+  }
+}
+.items {
+  width: 300px;
+  padding: 5px;
+  border-top: 1px solid #cacaca;
+  margin: 8px;
+  .airlineName {
+    font-size: 18px;
+    color: #333333;
+  }
+}
+.aligned {
+  display: flex;
+  align-items: center;
+  a {
+    text-decoration: none;
+  }
+  .airline-image {
+    height: 20%;
+    width: 20%;
+  }
+  span {
+    padding-left: 18px;
+    max-width: 200px;
+    word-break: break-all;
+  }
+}
