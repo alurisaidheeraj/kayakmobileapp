@@ -16,45 +16,47 @@ const AirlineList = () => {
   }, [airlines, dispatch]);
 
   return (
-    <div className="airlinelist">
+    <div className="airlinelist-page">
       <div className="airlinelistLogo">
         <img className="kayak-header-logo" src={logo} alt="" />
       </div>
-      <input
-        className="airline-search-filter"
-        type="text"
-        placeholder="Airline filter..."
-        onChange={(e) => {
-          setSearchTerm(e.target.value);
-        }}
-      />
-      <div className="airlinelistDetails">
-        {airlines
-          .filter((airline) => {
-            if (searchTerm === "") {
-              return airline;
-            } else if (
-              airline.name.toLowerCase().includes(searchTerm.toLowerCase())
-            ) {
-              return airline;
-            }
-            return false;
-          })
-          .map((airline, index) => (
-            <div className="items" key={index}>
-              <div className="aligned">
-                <img
-                  className="airline-image"
-                  src={"https://kayak.com" + airline.logoURL}
-                  alt=""
-                />
+      <div className="airlinelist">
+        <input
+          className="airline-search-filter"
+          type="text"
+          placeholder="Airline filter..."
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
+        />
+        <div className="airlinelistDetails">
+          {airlines
+            .filter((airline) => {
+              if (searchTerm === "") {
+                return airline;
+              } else if (
+                airline.name.toLowerCase().includes(searchTerm.toLowerCase())
+              ) {
+                return airline;
+              }
+              return false;
+            })
+            .map((airline, index) => (
                 <Link to={`${airline.code}`}>
-                  {" "}
-                  <span className="airlineName">{airline.name}</span>
-                </Link>
+                    {" "}
+              <div className="items" key={index}>
+                <div className="aligned">
+                    <img
+                      className="airline-image"
+                      src={"https://kayak.com" + airline.logoURL}
+                      alt=""
+                    />
+                 </div>
+                    <div className="airlineName">{airline.name}</div>
               </div>
-            </div>
-          ))}
+              </Link>
+            ))}
+        </div>
       </div>
     </div>
   );
